@@ -1,0 +1,19 @@
+uuid: 2972f472-2192-4e27-85c0-e017656c4d08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bs
+    - node.type.company
+id: node.company.field_bs
+field_name: field_bs
+entity_type: node
+bundle: company
+label: 'Business Strategy'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

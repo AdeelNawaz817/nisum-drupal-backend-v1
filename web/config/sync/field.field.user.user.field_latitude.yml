@@ -1,0 +1,20 @@
+uuid: 5b94f291-3be1-4487-b594-2c8c5db5a3e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_latitude
+  module:
+    - user
+id: user.user.field_latitude
+field_name: field_latitude
+entity_type: user
+bundle: user
+label: latitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

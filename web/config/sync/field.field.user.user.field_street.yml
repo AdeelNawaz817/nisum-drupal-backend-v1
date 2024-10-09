@@ -1,0 +1,20 @@
+uuid: a5031764-3569-4b65-ad25-a6e2efb1741a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_street
+  module:
+    - user
+id: user.user.field_street
+field_name: field_street
+entity_type: user
+bundle: user
+label: Street
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

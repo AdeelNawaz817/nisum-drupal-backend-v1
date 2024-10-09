@@ -1,0 +1,7 @@
+backend_test.user-info:
+  path: '/user-data'
+  defaults:
+    _controller: '\Drupal\backend_test\Controller\CustomMigrateApiController::content'
+    _title: 'User company information'
+  requirements:
+    _permission: 'access content'

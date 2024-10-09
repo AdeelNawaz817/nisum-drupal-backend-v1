@@ -1,0 +1,35 @@
+id: backend_test_users
+label: 'Import Users from JSON'
+source:
+  plugin: json_placeholder_source
+  ids:
+    id:
+      type: integer
+process:
+  name: username
+  mail: email
+  status:
+    plugin: default_value
+    default_value: 1
+  field_phone: phone
+  field_website: website
+  field_full_name: name
+  field_latitude: address_geo_lat
+  field_longitude: address_geo_lng
+  field_street: address_street
+  field_suite: address_suite
+  field_zipcode: address_zipcode
+  field_city: address_city
+  field_company:               # This is the field for referencing the company
+    plugin: migration_lookup    # Uses migration_lookup plugin to find the related company entity
+    migration: backend_test_companies    # Reference to the company migration ID
+    source: company_name        # The source field (from JSON) that matches the company title in the company migration
+    value_key: nid              # We need the 'nid' of the company for the reference
+destination:
+  plugin: entity:user
+dependencies: null
+migration_group: default
+
+migration_dependencies:
+  required:
+    - backend_test_companies    # The company migration should run first

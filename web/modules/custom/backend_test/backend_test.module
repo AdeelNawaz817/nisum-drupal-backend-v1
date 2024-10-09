@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains theme hook implementation for backend_test module.
+ */
+
+/**
+ * Implements hook_theme() for rendering user data.
+ */
+function backend_test_theme($existing, $type, $theme, $path) {
+  return [
+    'user_data_template' => [
+      'variables' => [
+        'users' => [],
+      ],
+      'template' => 'user-data',
+    ],
+  ];
+}

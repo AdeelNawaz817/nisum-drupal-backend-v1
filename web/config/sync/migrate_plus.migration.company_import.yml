@@ -1,0 +1,43 @@
+uuid: a945eb80-1ab7-4bc3-9266-c007b92389ab
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sygCZrHOEW0lZ9Q8A_QLfjZwKLefZaeChVitBrYbXXw
+id: company_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'Company Import'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    callback: custom_imp_api_migrate_urls
+  fields:
+    -
+      name: id
+      label: ID
+    -
+      name: company.name
+      label: 'Company Name'
+    -
+      name: company.catchPhrase
+      label: 'Catch Phrase'
+    -
+      name: company.bs
+      label: 'Business Strategy'
+  ids:
+    id:
+      type: integer
+process:
+  title: company.name
+  field_catch_phrase: company.catchPhrase
+  field_business_strategy: company.bs
+destination:
+  plugin: 'entity:node'
+  default_bundle: company
+migration_dependencies: null

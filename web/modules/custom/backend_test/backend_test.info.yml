@@ -1,0 +1,9 @@
+name: 'Backend Test'
+type: module
+description: 'Custom module for importing users and companies from a JSON source using the Migrate API.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_plus
+  - drupal:migrate_tools

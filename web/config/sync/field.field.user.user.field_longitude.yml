@@ -1,0 +1,20 @@
+uuid: 8a62de0d-3ef8-41b0-a735-683cc940318c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_longitude
+  module:
+    - user
+id: user.user.field_longitude
+field_name: field_longitude
+entity_type: user
+bundle: user
+label: longitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

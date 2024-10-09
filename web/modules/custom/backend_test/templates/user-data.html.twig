@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>{{ 'Username'|t }}</th>
+      <th>{{ 'Email'|t }}</th>
+      <th>{{ 'Company'|t }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      <tr>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.company }}</td>
+      </tr>
+    {% else %}
+      <tr>
+        <td colspan="4">{{ 'No users found'|t }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

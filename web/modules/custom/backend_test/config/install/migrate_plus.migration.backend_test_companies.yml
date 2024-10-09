@@ -1,0 +1,22 @@
+id: backend_test_companies
+label: 'Import Companies from JSON'
+source:
+  plugin: json_placeholder_source
+  ids:
+    id:
+      type: integer
+
+process:
+  title: name
+  field_catchphrase: company_catchphrase
+  field_bs: company_bs
+  langcode:
+    plugin: default_value 
+    default_value: en
+  uid:
+    plugin: default_value 
+    default_value: 1
+destination:
+  plugin: entity:node
+  default_bundle: company
+migration_group: default
